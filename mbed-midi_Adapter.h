@@ -5,11 +5,11 @@
 
 BEGIN_MBED_MIDI_NAMESPACE
 
-class MbedAdapter {
+class Adapter {
 public:
-    inline MbedAdapter(PinName inTxPin,
-                       PinName inRxPin);
-    inline ~MbedAdapter();
+    inline Adapter(PinName inTxPin,
+                   PinName inRxPin);
+    inline ~Adapter();
 
 public: // Serial / Stream API required for template contract with MIDI Library.
     inline void begin(unsigned inBaudrate);

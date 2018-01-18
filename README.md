@@ -10,10 +10,10 @@ Adapter for using the Arduino MIDI Library on mbed platforms
 #include <mbed-midi_Adapter.h>
 
 // Create the adapter, connect to TX & RX pins
-mbed_midi::MbedAdapter gMbedAdapter(PTE0, PTE1);
+mbed_midi::Adapter gMbedMidiAdapter(PTE0, PTE1);
 
 // Create the MIDI object using the adapter
-MIDI_CREATE_INSTANCE(mbed_midi::MbedAdapter, gMbedAdapter, MIDI);
+MIDI_CREATE_INSTANCE(mbed_midi::Adapter, gMbedMidiAdapter, MIDI);
 
 // Callbacks --
 
