@@ -3,7 +3,7 @@
 BEGIN_MBED_MIDI_NAMESPACE
 
 inline Adapter::Adapter(PinName inTxPin,
-                                PinName inRxPin)
+                        PinName inRxPin)
     : mSerialPort(inTxPin, inRxPin)
 {
 }
