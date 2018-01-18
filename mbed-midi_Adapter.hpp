@@ -2,8 +2,8 @@
 
 BEGIN_MBED_MIDI_NAMESPACE
 
-inline MbedAdapter::MbedAdapter(mbed::PinName inTxPin,
-                                mbed::PinName inRxPin)
+inline MbedAdapter::MbedAdapter(PinName inTxPin,
+                                PinName inRxPin)
     : mSerialPort(inTxPin, inRxPin)
 {
 }
@@ -24,12 +24,12 @@ inline unsigned MbedAdapter::available()
     return mSerialPort.readable();
 }
 
-inline byte MbedAdapter::read()
+inline unsigned char MbedAdapter::read()
 {
     return mSerialPort.getc();
 }
 
-inline void MbedAdapter::write(byte inData)
+inline void MbedAdapter::write(unsigned char inData)
 {
     mSerialPort.putc(inData);
 }
